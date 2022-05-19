@@ -1,10 +1,9 @@
-<html>
-  <h1>IPL Registration Form</h1>
-  <table >
-    <div style="text-align: center;">
+<h1>IPL Registration Form</h1>
+<table>
+  <div style="text-align: center;">
     <tr>
       <td>
-       <span> First Name : <input type="text"> </span>
+        <span> First Name : <input type="text"> </span>
       </td>
     </tr>
     &nbsp; &nbsp;
@@ -22,9 +21,9 @@
     &nbsp; &nbsp;
     <tr>
       <td>
-          <button> Submit </button>
+        <button (Onclick)="GotoSecondComponent();"> Submit </button>
+        <router-outlet></router-outlet>
       </td>
     </tr>
   </div>
-  </table>
-</html>
+</table>

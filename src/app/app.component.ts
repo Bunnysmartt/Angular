@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-}
+  constructor(private _router:Router){}
 
-// openSecondComponent(){
-//   this.router.navigate()
-// }
+  GotoSecondComponent(){
+    this._router.navigateByUrl('/secondcomponent');
+  }
+}
