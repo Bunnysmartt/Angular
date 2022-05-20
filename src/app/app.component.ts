@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private _router:Router){}
+  constructor(private _router: Router) { }
+  navigatetosecond: any = '/secondcomponent';
 
-  GotoSecondComponent(){
-    this._router.navigateByUrl('/secondcomponent');
+  GotoSecondComponent(navigatetosecond: any) {
+    this._router.navigate([navigatetosecond]);
   }
 }

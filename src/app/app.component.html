@@ -1,6 +1,6 @@
-<h1>IPL Registration Form</h1>
+<h1> Registration Form</h1>
 <table>
-  <div style="text-align: center;">
+  <div style="text-align: center">
     <tr>
       <td>
         <span> First Name : <input type="text"> </span>
@@ -21,9 +21,11 @@
     &nbsp; &nbsp;
     <tr>
       <td>
-        <button (Onclick)="GotoSecondComponent();"> Submit </button>
-        <router-outlet></router-outlet>
+        <button (click)="GotoSecondComponent(navigatetosecond)"> Submit </button>
       </td>
     </tr>
   </div>
 </table>
+<div>
+  <router-outlet></router-outlet>
+</div>
