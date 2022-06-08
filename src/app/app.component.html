@@ -1,29 +1,7 @@
-<h1>IPL Registration Form</h1>
-<table>
-  <div style="text-align: center;">
-    <tr>
-      <td>
-        <span> First Name : <input type="text"> </span>
-      </td>
-    </tr>
-    &nbsp; &nbsp;
-    <tr>
-      <td>
-        Last Name : <input type="text">
-      </td>
-    </tr>
-    &nbsp; &nbsp;
-    <tr>
-      <td>
-        Name to be Printed : <input type="text">
-      </td>
-    </tr>
-    &nbsp; &nbsp;
-    <tr>
-      <td>
-        <button (Onclick)="GotoSecondComponent();"> Submit </button>
-        <router-outlet></router-outlet>
-      </td>
-    </tr>
-  </div>
-</table>
+<div class="nav">
+  <ul>
+    <li><a href="/second">second</a></li>
+    <li><a href="/first">first</a></li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { SecondcomponentComponent } from './secondcomponent/secondcomponent.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 const routes: Routes = [
-  { path: 'secondcomponent', component: SecondcomponentComponent },
-  { path: 'appcomponent', component: AppComponent }];
+  { path:'first', component: FirstComponent}, 
+  { path: 'second', component: SecondComponent},
+  { path: '', redirectTo:'app', pathMatch:'full'}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
