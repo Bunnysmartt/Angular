@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { SecondComponent } from './second/second.component';
-import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './Details/second.component';
+import { FirstComponent } from './About/first.component';
 
 @NgModule({
   declarations: [
