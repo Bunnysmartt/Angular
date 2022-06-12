@@ -1,0 +1,8 @@
+.hoverstate:hover{
+    background: rgb(129, 187, 231);
+}
+
+.pressedstate:focus{
+    background: rgb(129, 187, 231);
+
+}
