@@ -7,12 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./form.component.css']
 })
 export class SecondComponent implements OnInit {
+isLoading = false;
 
   constructor(private _router:Router) { }
 
   ngOnInit(): void {
   }
-  GotoSecondComponent(){
-    this._router.navigateByUrl('user-details');
+  navigateToUserDetails(){
+    this.isLoading = true;
+    this._router.navigate(['/user-details']);
   }
 }
