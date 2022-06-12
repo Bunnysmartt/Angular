@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-second',
-  templateUrl: './second.component.html',
-  styleUrls: ['./second.component.css']
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css']
 })
 export class SecondComponent implements OnInit {
 
@@ -13,6 +13,6 @@ export class SecondComponent implements OnInit {
   ngOnInit(): void {
   }
   GotoSecondComponent(){
-    this._router.navigateByUrl('first');
+    this._router.navigateByUrl('user-details');
   }
 }
