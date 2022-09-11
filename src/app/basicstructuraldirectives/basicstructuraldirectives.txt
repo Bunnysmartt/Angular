@@ -1,0 +1,47 @@
+
+what is structural directive?
+--------------------------------------
+If we want to provide proper strcture to our data,then we need to use structural directive
+
+Component is a structural directive because we can struture to our data.
+
+*ngIf,ngSwitch,*ngFor other structural directives also available.By using these we can control the data
+
+We can create our own structural directive.That can be called as custom directive.
+
+
+By using custom directive we can manipulate html element along with internal part.
+
+How to create a Custom Directive by using cli?
+---------------------------------------------
+By using below command
+
+ng generate directive directivename
+
+Where we need to add custom directive in app.module.ts?
+--------------------------------------------------------
+We need to add custom directive in "declarations" array in app.module.ts
+
+How to apply custom direcive on any html element?
+--------------------------------------------------
+Every directive must have a "selector".We need to place this "selector" in required html element.
+
+How to get html element after appling directive related selector?
+------------------------------------------------------------------
+We need to use "ElementRef" to get the html element.ElementRef is a pre-defined Object in angular. we need to import it by using below statement.
+
+e.g
+----
+import {ElementRef} from '@angular/core';
+
+This "ElementRef" we need to assign to any variable or parameter.
+
+After assign "ElementReaf" to any variable or parameter,then wherever you apply direcive related selector that html element will come to "nativeElement" object in "ElementRef".
+
+If we want to manipulate that html element,then we need to use below code
+
+this.ElementRef_variable.nativeElement.innerHTML = "write your own data"
+
+
+
+

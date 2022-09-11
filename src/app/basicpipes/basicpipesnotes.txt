@@ -1,0 +1,232 @@
+20:50
+
+ramesh trainer to Everyone
+
+What is a Pipe?
+----------------
+Pipes are pre  defined methods in angular to manipuate data.
+
+List Pre defined pipes in angular?
+----------------------------------
+/* -------------- text transforming pipes --------------------- */
+ uppercase:
+--------------
+this pipe is used to display our data in capital letters.
+
+lowercase:
+---------
+this pipe is used to display our data in lower case letters.
+
+titlecase:
+---------
+this pipe is used to display our data First letter capital and first letter after every space in capital letters.
+
+/* --------------------- Date Pipes ----------------------------- */
+
+date:
+----
+Inorder to work with "date" pipe we need to create an object for "Date()" method in component.ts file.
+
+date is parameterised pipe also.
+
+date:
+----
+this pipe will display date like below example
+
+e.g
+----
+Dec 21,2022 (only first 3 letters in the month)
+
+date:'shorDate':
+-----------------
+this pipe will display the data in m/d/y(month/day/year) format.
+
+e.g
+---
+12/21/2022
+
+date:'mediumDate':
+------------------
+this is by fault for date pipe also.
+
+It will display only first 3 letters in the month, day number and full year number.
+
+e.g
+-----
+Dec 21,2022
+
+date:'longDate':
+-----------------
+It will display the date with Full month name ,day number and full year number
+
+e.g:
+----
+December 21,2022
+
+date:'shortTime':
+------------------
+It will display the time with hours and minutes and "AM or PM"
+
+e.g:
+----
+7:15 AM
+
+date:'mediumTime':
+---------------------
+It will display the time with hours,minutes,secons and "AM or PM".
+
+e.g:
+----
+7:15:22 AM
+
+date:'longTime':
+----------------
+It will display the time with hours,minutes,secons and "AM or PM" along with GMT.
+
+e.g:
+----
+7:15:22 AM GMT05
+
+/* ------------------------ Number Pipes --------------------- */
+
+number:
+-------
+this pipe is used to manipulate numbers format.It will minimum value left side of the dot(.) and minimum and maximum values right side of the dot(.)
+
+syntax for float numbers:
+------------------------
+number.number
+
+1st e.g before applying number pipe
+-----------------------------------
+price = 6.7
+
+{{price}}
+
+output:
+-----
+6.7
+
+e.g after applying number pipe
+-------------------------------
+{{price | number:'3.3'}}
+
+output:
+-------
+006.700
+
+2nd e.g before applying number pipe
+-----------------------------------
+price:number = 6.78869325314875;
+
+{{price}}
+
+output:
+------
+6.78869325314875
+
+e.g after applying number pipe
+------------------------------
+
+{{price | 2.3-4}}
+
+output:
+------
+06.7887
+
+Note:
+----
+In the above example "2" is minimum values left side before dot(.)
+
+"3" is minimum values right side after dot(.)
+
+"-4" is maximum values should display right side after dot(.). It will give maximum highest number in the end.
+
+/* ---------------- currency pipes ------------------ */
+currency:
+-----------
+this pipe is used manipulate the number to display along with currency symbol or currency code
+
+This is a normal pipe also and parameterise pipe also.
+
+e.g for currency pipe
+---------------------
+price : number =100
+
+{{price | currency}}
+
+output:
+------
+$100.00
+
+Note:
+-----
+U.S dollars are default value for currency pipe.
+
+
+If we want to change the default currency symbol,then we need  to use this "currency" pipe with "currency code" parameters.
+
+examples
+--------
+price : number = 100
+
+{{price | currency:'INR'}}
+{{price | currency:'GBP'}}
+{{price | currency:'EUR'}}
+{{price | currency:'JPY'}}
+
+
+Note:
+------
+INR is indian currency code.
+
+GBP is Britain currency code.
+
+EUR is Eurpean countries currency code.
+
+JPY is japanese currency code.
+
+What is custom Pipe?
+---------------------
+If we want to manipulate the data for our application requirements,then we need to create custom pipes
+
+custom pipes user defined pipes
+
+How to create a pipe and where we need to place it app.module.ts?
+------------------------------------------------------------------
+By using below command we can create a pipe
+
+e.g
+----
+ng generate pipe pipename
+
+we need to place this pipe related class in "declarations" array in app.module.ts
+
+Explain custom pipe functionality?
+------------------------------------
+Custom pipe should implement "PipeTransform" interface.This is pre defined interface in angular
+
+This "PipeTransform" interface has a method called "transform".So whatever pipe class implementing this interface should have to contain "transform" method.
+
+transform method will expect minimum two parameters.1st param is what data to manipulate.2nd param is depends upon what we need to manipuate the data.
+
+transform method should return some data with the manipulation.
+
+How to apply and send parameters to the custom pipe?
+------------------------------------------------------
+
+Every custom pipe should have a "name" in "@Pipe({})" decorator.We need to used this "name"
+
+
+this "name" to apply for the data
+
+e.g without param
+--------------------
+@Pipe({name:'custompipename'})
+
+{{firstname | custompipename}}
+
+e.g with param
+-------------
+{{firstname | custompipename:gender}}
+

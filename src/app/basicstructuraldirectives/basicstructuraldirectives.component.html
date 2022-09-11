@@ -1,0 +1,48 @@
+<p>basicstructuraldirectives works!</p>
+
+<h1 *ngIf="isadded">{{successmessage}}</h1>
+
+<div *ngIf="displaymessage;then ravi; else kiran;"></div>
+
+<ng-template #ravi>hi ravi</ng-template>
+<br><br>
+
+<ng-template #kiran>hi kiran</ng-template> 
+<br>
+
+<button (click)="OnChange()">Submit</button>
+
+<div [ngSwitch]="myname">
+
+<div *ngSwitchCase="'Siddhu'">Siddhu is Smart</div>
+<div *ngSwitchCase="'Kiran'">Kiran is Smart</div>
+<div *ngSwitchCase="'Sirisha'">Sirisha is Smart</div>
+<div *ngSwitchCase="'Pammi'">Pammi is Smart</div>
+<div *ngSwitchCase="'Bunny'">Bunny is Smart</div>
+<div *ngSwitchDefault>No Information Found</div>
+
+</div>
+
+
+<ul>
+<li *ngFor="let items of myobj">
+{{items.name}}
+</li>
+</ul> 
+
+<table width = 100% >
+    <tr>
+        <td>SNO</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Gender</td>
+    </tr>
+    <tr *ngFor="let item of myobj; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{item.name | addsubtitle : item.gender}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.gender}}</td>
+    </tr>
+</table>
+
+<h2 appChangetheelement>My Name is Aryan Gautam</h2>
