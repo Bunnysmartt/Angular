@@ -1,0 +1,54 @@
+<div class = "container-fluid bg-primary mb-3">You are Awesome!!</div>
+<div class = "container bg-danger mb-3" >bunnys</div>
+<div class="container-fluid bg-warning mb-3">
+    <div class="row">
+        <div class="col-12">
+            hey
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-6 bg-primary">Ravi</div>
+        <div class="col-6 bg-danger">Bunny</div>
+    </div>
+
+</div>
+
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-4 bg-primary">Ravi</div>
+        <div class="col-4 bg-danger">Bunny</div>
+        <div class="col-4 bg-warning">kiran</div>
+    </div>
+
+</div>
+
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-8 bg-primary">Ravi</div>
+        <div class="col-4 bg-danger">Bunny</div>
+    </div>
+
+</div>
+
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-8 bg-primary">Ravi</div>
+        <div class="col-2 bg-danger">Bunny</div>
+        <div class="col-2 bg-warning">Bunny</div>
+    </div>
+
+</div>
+
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-6 bg-primary">Ravi</div>
+        <div class="col-4 bg-danger">Bunny</div>
+        <div class="col-2 bg-warning">Bunny</div>
+    </div>
+
+</div>
+
+<div class = "container bg-warning mb-3" >Aryan</div>

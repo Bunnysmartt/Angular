@@ -11,15 +11,18 @@ import { ServicesComponent } from './services/services.component';
 import { LazycontactComponent } from './lazycontact/lazycontact.component';
 import { LazyloadingModule } from './lazyloading.module';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AddemployeesdataComponent } from './addemployeesdata/addemployeesdata.component';
+import { EmployeesdataComponent } from './employeesdata/employeesdata.component';
 
 const routes: Routes = [
+  {path: '', component: EmployeesdataComponent},
   {path:'Home', component: HomeComponent},
   {path: 'About', component: AboutComponent},
   {path: 'Services', component: ServicesComponent, children: [{ path : 'ourservices', component: OurservicesComponent}, {path : 'contact', component: ContactComponent }]},
+  {path: 'add-employees', component: AddemployeesdataComponent},
   {path: '**', component: PagenotfoundComponent},
   {path:'lazy-contact-modl', loadChildren:()=> LazyloadingModule},
-  { path: '', redirectTo:'app', pathMatch:'full'}
-
+  //{path: '', redirectTo:'app', pathMatch:'full'}
 ];
 
 @NgModule({

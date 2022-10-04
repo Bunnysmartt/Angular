@@ -1,0 +1,21 @@
+<!-- <ul>
+    <li *ngFor= "let item of displayemployeedata" > {{item.FirstName}} </li>
+</ul> -->
+<a routerLink= "/add-employees" class="btn btn-success mb-3"> Add Employee</a>
+<table width ="100%">
+    <tr>
+        <td>Sno</td>
+        <td>FirstName</td>
+        <td>LastName</td>
+        <td>Email</td>
+        <td colspan="2">Actions</td>
+    </tr>
+    <tr *ngFor="let item of displayemployeedata; let i=index" >
+        <td>{{i+1}}</td>
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.Email}}</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+</table>

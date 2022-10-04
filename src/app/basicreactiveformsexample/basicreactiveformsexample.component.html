@@ -1,0 +1,41 @@
+<div class="container-fluid border ">
+    <div class="row">
+        <div class="col-10 mx-auto border">
+            <form [formGroup]= "Reactivefrm">
+                <div>
+                    <h1>Reactive Forms</h1>
+                </div>
+                <div class="form-group">
+                    <label for="uname">UserName</label>
+                    <input type="text" id="uname" class="form-control" formControlName="username">
+                </div>
+                <div class="form-group">
+                    <label for="upwd">Password</label>
+                    <input type="text" id="upwd" class="form-control" formControlName="password" >
+                </div>
+                <div class="form-group">
+                    <label for="cpwd">ConfirmPassword</label>
+                    <input type="text" id="cpwd"class="form-control" formControlName="cnfpassword">
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zipcode</label>
+                    <input type="text" id="zip" class="form-control" formControlName="zipvalidator">
+                </div>
+
+                <button class="btn btn-success" (click)="OnSubmit()">Submit</button>
+                <br> <br>
+                <hr>
+                <div class="validations" *ngIf= "Reactivefrm.touched">
+                <span *ngIf= "Reactivefrm.controls['username'].invalid"><i class="fa fa-times-circle" style="color:firebrick;margin-right:5px;"></i>Username should be 3 characters
+                </span>
+                <span *ngIf= "Reactivefrm.controls['cnfpassword'].invalid"><i class="fa fa-times-circle" style="color:firebrick;margin-right:5px;"></i>password and confirm password should be matched. 
+                </span>
+                <span *ngIf= "Reactivefrm.controls['zipvalidator'].invalid"><i class="fa fa-times-circle" style="color:firebrick;margin-right:5px;"></i>Zip Code should be 6 characters
+                </span> 
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>

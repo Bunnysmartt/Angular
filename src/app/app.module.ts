@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample/sample.component';
 import { BasicpipesComponent } from './basicpipes/basicpipes.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +17,11 @@ import { BasicstructuraldirectivesComponent } from './basicstructuraldirectives/
 import { AddsubtitlePipe } from './addsubtitle.pipe';
 import { ChangetheelementDirective } from './changetheelement.directive';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { BasictemplatedrivenformsComponent } from './basictemplatedrivenforms/basictemplatedrivenforms.component';
+import { BasicreactiveformsexampleComponent } from './basicreactiveformsexample/basicreactiveformsexample.component';
+import { BasicinputoutputdecoratorsComponent } from './basicinputoutputdecorators/basicinputoutputdecorators.component';
+import { EmployeesdataComponent } from './employeesdata/employeesdata.component';
+import { AddemployeesdataComponent } from './addemployeesdata/addemployeesdata.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +37,19 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     BasicstructuraldirectivesComponent,
     AddsubtitlePipe,
     ChangetheelementDirective,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    BasictemplatedrivenformsComponent,
+    BasicreactiveformsexampleComponent,
+    BasicinputoutputdecoratorsComponent,
+    EmployeesdataComponent,
+    AddemployeesdataComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

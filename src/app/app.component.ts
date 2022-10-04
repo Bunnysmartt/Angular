@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  parentData:string='';
+  displaychild: string=''
   constructor(){}
+  sendData(getdata:string){
+    this.parentData = getdata;
+    
+  }
 }

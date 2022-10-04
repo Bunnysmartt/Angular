@@ -1,0 +1,31 @@
+<div class="container-fluid border">
+    <div class="row">
+        <div class="col-10 mx-auto border">
+            <div>
+                <h2>Add Employee Details</h2>
+                <form #empform="ngForm" (ngSubmit)="addEmployees(empform)">
+                    <div class="form-group">
+                        <label>FirstName</label>
+                        <input type="text" class="form-control" name="fname" ngModel #fname="ngModel" required>
+                        <div class="alert-danger" *ngIf="fname.invalid && empform.submitted"> Please Enter FirstName
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>LastName</label>
+                        <input type="text" class="form-control" name="lname" ngModel #lname="ngModel" required>
+                        <div class="alert-danger" *ngIf="empform.submitted && lname.invalid"> Please Enter LastName
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" name="email" ngModel #email="ngModel" required>
+                        <div class="alert-danger" *ngIf="empform.submitted && email.invalid"> Please Enter Email </div>
+                    </div>
+                    <button class="btn btn-success">Submit</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
